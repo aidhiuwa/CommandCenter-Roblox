@@ -174,7 +174,7 @@ end
 
 function CC.AddCommand(Name, Func)
 	if LoadedGui and Name and Func then
-		local Clone = LoadedGui.Frame.Demo:Clone()
+		local Clone = LoadedGui.Demo:Clone()
 		Clone.Name = Name
 		Clone.Parent = LoadedGui.Frame.CommandHoldingFrame
 		Clone.Text = Name
