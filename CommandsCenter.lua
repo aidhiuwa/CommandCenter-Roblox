@@ -180,7 +180,8 @@ function CC.AddCommand(Name, Func)
 		Clone.Text = Name
 		
 		Clone.MouseButton1Click:Connect(function()
-			Func()
+			local success, err = pcall(Func)
+			if not success then warn("Error in command '" .. Name .. "':", err) end
 		end)
 	end
 end
